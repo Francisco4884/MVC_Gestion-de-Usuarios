@@ -1,0 +1,195 @@
+/* ===== Gestion de Usuarios — Paleta verde claro (#629900) ===== */
+:root {
+	--verde: #629900;
+	--verde-oscuro: #4e7a00;
+	--verde-claro: #eef5d8;
+	--verde-suave: #f7faef;
+	--verde-hover-fila: #e2efc4;
+	--gris: #6b7280;
+	--gris-claro: #e5e7eb;
+	--texto: #2d3a09;
+	--blanco: #ffffff;
+	--sombra: 0 4px 14px rgba(98, 153, 0, 0.12);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	background: var(--verde-suave);
+	color: var(--texto);
+	line-height: 1.5;
+}
+
+/* Contenedor central tipo tarjeta */
+.contenedor {
+	max-width: 820px;
+	margin: 40px auto;
+	background: var(--blanco);
+	padding: 32px 36px;
+	border-radius: 14px;
+	box-shadow: var(--sombra);
+	border-top: 6px solid var(--verde);
+}
+
+h1 {
+	margin: 0 0 24px;
+	color: var(--verde-oscuro);
+	font-size: 1.7rem;
+}
+
+/* ===== Tabla ===== */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 8px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+th, td {
+	padding: 12px 14px;
+	text-align: left;
+}
+
+th {
+	background: var(--verde);
+	color: var(--blanco);
+	font-weight: 600;
+}
+
+td {
+	border-bottom: 1px solid var(--gris-claro);
+}
+
+tr:nth-child(even) td {
+	background: var(--verde-claro);
+}
+
+tbody tr:hover td,
+table tr:hover td {
+	background: var(--verde-hover-fila);
+}
+
+/* ===== Formularios ===== */
+label {
+	display: block;
+	margin-bottom: 16px;
+	font-weight: 600;
+	color: var(--texto);
+}
+
+input[type="text"],
+select {
+	display: block;
+	width: 100%;
+	margin-top: 6px;
+	padding: 10px 12px;
+	font-size: 1rem;
+	border: 1px solid var(--gris-claro);
+	border-radius: 8px;
+	background: var(--blanco);
+	color: var(--texto);
+	transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input[type="text"]:focus,
+select:focus {
+	outline: none;
+	border-color: var(--verde);
+	box-shadow: 0 0 0 3px rgba(98, 153, 0, 0.18);
+}
+
+/* Campo de solo lectura (correo en actualizar) */
+input[readonly] {
+	background: var(--gris-claro);
+	color: var(--gris);
+	cursor: not-allowed;
+}
+
+/* ===== Botones ===== */
+.btn,
+button {
+	display: inline-block;
+	padding: 10px 18px;
+	margin: 6px 6px 6px 0;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: var(--blanco);
+	background: var(--verde);
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	text-decoration: none;
+	transition: background 0.15s, transform 0.05s;
+}
+
+.btn:hover,
+button:hover {
+	background: var(--verde-oscuro);
+}
+
+.btn:active,
+button:active {
+	transform: translateY(1px);
+}
+
+.btn-secondary {
+	background: var(--gris);
+}
+
+.btn-secondary:hover {
+	background: #565d68;
+}
+
+/* Acciones dentro de las celdas de la tabla */
+td form {
+	display: inline;
+}
+
+td button {
+	padding: 7px 12px;
+	font-size: 0.85rem;
+}
+
+/* Barra de acciones superior (boton Nuevo) */
+.acciones-top {
+	margin-bottom: 20px;
+}
+
+/* Mensajes informativos */
+.mensaje {
+	background: var(--verde-claro);
+	border-left: 4px solid var(--verde);
+	padding: 12px 16px;
+	border-radius: 8px;
+	margin-bottom: 18px;
+	color: var(--verde-oscuro);
+}
+
+/* ===== Paginacion (hojas) ===== */
+.paginacion {
+	margin-top: 22px;
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.paginacion .btn {
+	margin: 0;
+	padding: 8px 14px;
+}
+
+.pagina-actual {
+	display: inline-block;
+	padding: 8px 14px;
+	font-weight: 700;
+	color: var(--blanco);
+	background: var(--verde);
+	border-radius: 8px;
+}
